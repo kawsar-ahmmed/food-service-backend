@@ -32,7 +32,7 @@ async function run() {
             const newUser = req.body; // Use req.body instead of res.body
             console.log(newUser);
             const result = await userCollection.insertOne(newUser);
-            res.send({result:'success'}); // Access the insertedId property of the result
+            res.send(result);
         });
 
         // Get Data from backend
